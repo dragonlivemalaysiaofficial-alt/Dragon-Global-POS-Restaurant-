@@ -1,0 +1,17 @@
+{
+  "short_name": "DG POS",
+  "name": "Dragon Global POS",
+  "description": "An advanced restaurant management system with a point-of-sale interface, menu management, customer details, billing, and sales reporting. It provides full CRUD operations for the menu and tracks sales data locally.",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#D73737",
+  "background_color": "#121212"
+}

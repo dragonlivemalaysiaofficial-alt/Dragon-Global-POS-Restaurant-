@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant POS & Management</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#D73737" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+              'serif': ['Georgia', 'serif'],
+            },
+            colors: {
+              'primary': '#D73737', // Fiery Red
+              'primary-dark': '#B82C2C',
+              'secondary': '#1F1F1F', // Smoky Black
+              'secondary-light': '#2D2D2D',
+              'background': '#121212', // Almost Black
+              'accent': '#FBBF24', // Gold/Amber
+              'text-primary': '#F3F4F6', // Light Gray
+              'text-secondary': '#9CA3AF', // Gray
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-image: url('https://www.transparenttextures.com/patterns/black-scales.png');
+            background-color: #121212; /* Fallback color */
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-text-primary font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
